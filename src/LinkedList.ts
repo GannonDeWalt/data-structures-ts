@@ -11,6 +11,7 @@ export default class LinkedList {
     this.size = 0;
 
   }
+  //TODO: placeholders for head and tail so we dont' run into undefined issue
 
 
   add(node : Node){
@@ -18,7 +19,7 @@ export default class LinkedList {
       this.head = node;
 
     this.tail.next = node;
-    node.next = {} as Node;
+    node.next = undefined;
     this.tail = node;
 
     this.size++;
@@ -50,9 +51,6 @@ export default class LinkedList {
       temp.next = node.next;
     }
 
-
-
-    
   }
 
   count(){
