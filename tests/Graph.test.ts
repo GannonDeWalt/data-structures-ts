@@ -30,30 +30,30 @@ describe("Graph", () => {
         graph.addAll(nodes);
         expect(graph.size()).toEqual(2);
     });
-    //
-    // test("should create an edge between 2 nodes", () => {
-    //     let aladin = new GraphNode("Aladin");
-    //     let genie = new GraphNode("Genie");
-    //     graph.connect(aladin, genie);
-    //     expect(graph.isAdjacent(aladin, genie)).toBeTruthy();
-    // });
-    //
-    // test("should return all adjacent nodes", ()=> {
-    //     let andre = new GraphNode("Andre");
-    //     createFriendGraph(andre);
-    //     let andresFriends = graph.getNeighbors(andre)
-    //     expect(andresFriends.length).toEqual(2);
-    // });
-    //
-    // test("should remove the edge between 2 nodes", () => {
-    //     let aladin = new GraphNode("Aladin");
-    //     let genie = new GraphNode("Genie");
-    //     graph.disconnect(aladin, genie);
-    //     expect(graph.isAdjacent(aladin, genie)).toBeFalsy();
-    // });
+    
+    test("should create an edge between 2 nodes", () => {
+        let aladin = new GraphNode("Aladin");
+        let genie = new GraphNode("Genie");
+        graph.connect(aladin, genie);
+        expect(graph.isAdjacent(aladin, genie)).toBeTruthy();
+    });
+    
+    test("should return all adjacent nodes", ()=> {
+        let andre = new GraphNode("Andre");
+        createFriendGraph(andre);
+        let andresFriends = graph.getNeighbors(andre)
+        expect(andresFriends.length).toEqual(2);
+    });
+    
+    test("should remove the edge between 2 nodes", () => {
+        let aladin = new GraphNode("Aladin");
+        let genie = new GraphNode("Genie");
+        graph.disconnect(aladin, genie);
+        expect(graph.isAdjacent(aladin, genie)).toBeFalsy();
+    });
 
-    // Test Utilities ---------------------------------
-    /*
+    // //Test Utilities ---------------------------------
+    
     function createFriendGraph(subject: GraphNode) {
         let alan  = new GraphNode("Alan");
         let jin = new GraphNode("Jin");
@@ -67,5 +67,5 @@ describe("Graph", () => {
         graph.connect(jin,shonda);
         graph.connect(shonda, hanan);
         return friends;
-    }*/
+    }
 })
