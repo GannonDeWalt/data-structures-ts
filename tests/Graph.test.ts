@@ -17,19 +17,19 @@ describe("Graph", () => {
         expect(graph).toBeTruthy();
     });
 
-    // test("should add a node", () => {
-    //     let node = new GraphNode();
-    //     graph.add(node);
-    //     expect(graph.size()).toEqual(1);
-    // });
-    //
-    // test("should add a list of nodes", () => {
-    //     let nodes = [];
-    //     nodes.push(new GraphNode());
-    //     nodes.push(new GraphNode());
-    //     graph.addAll(nodes);
-    //     expect(graph.size()).toEqual(2);
-    // });
+    test("should add a node", () => {
+        let node = new GraphNode();
+        graph.add(node);
+        expect(graph.size()).toEqual(1);
+    });
+    
+    test("should add a list of nodes", () => {
+        let nodes = [];
+        nodes.push(new GraphNode());
+        nodes.push(new GraphNode());
+        graph.addAll(nodes);
+        expect(graph.size()).toEqual(2);
+    });
     //
     // test("should create an edge between 2 nodes", () => {
     //     let aladin = new GraphNode("Aladin");
@@ -53,7 +53,7 @@ describe("Graph", () => {
     // });
 
     // Test Utilities ---------------------------------
-
+    /*
     function createFriendGraph(subject: GraphNode) {
         let alan  = new GraphNode("Alan");
         let jin = new GraphNode("Jin");
@@ -67,5 +67,5 @@ describe("Graph", () => {
         graph.connect(jin,shonda);
         graph.connect(shonda, hanan);
         return friends;
-    }
+    }*/
 })
